@@ -43,3 +43,27 @@ public class Asdf {
 2009.07.25 20:25 Message B
 2009.07.25 20:30 Message D
 2009.07.25 21:08 Message E
+*/
+
+
+/// int 2d array sort by columns here!!! ///
+public static void sortbyColumn(int arr[][], int col) 
+    { 
+        // Using built-in sort function Arrays.sort 
+        Arrays.sort(arr, new Comparator<int[]>() { 
+            
+          @Override              
+          // Compare values according to columns 
+          public int compare(final int[] entry1,  
+                             final int[] entry2) { 
+  
+            // To sort in descending order revert  
+            // the '>' Operator 
+            if (entry1[col] > entry2[col]) 
+                return 1; 
+            else
+                return -1; 
+          } 
+        });  // End of function call sort(). 
+    } 
+ //////////////////////////////////////////////////////
